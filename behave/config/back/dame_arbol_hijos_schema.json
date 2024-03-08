@@ -1,0 +1,131 @@
+{
+  "error": false,
+  "excepciones": [],
+  "unidades": [
+    {
+      "fechapeticion": "",
+      "idestructura": "1",
+      "idversion": "1",
+      "tipoversion": "C",
+      "codigo": "1569",
+      "codigoDirectorioComun": null,
+      "denominacion": "Centro de Salud de Calahorra",
+      "idestructurapral": "2",
+      "idpadre": "751",
+      "idunidad": "805",
+      "nivel": "3",
+      "peso": "370",
+      "direcciones": [],
+      "padresConAtributos": [],
+      "recursos": [],
+      "significativa": {
+        "atributo": "",
+        "codigo": "",
+        "codigoDirectorioComun": "",
+        "denominacion": "",
+        "idunidad": "",
+        "recursos": []
+      }
+    },
+    {
+      "fechapeticion": "",
+      "idestructura": "1",
+      "idversion": "1",
+      "tipoversion": "C",
+      "codigo": "156910",
+      "codigoDirectorioComun": null,
+      "denominacion": "Médica",
+      "idestructurapral": "2",
+      "idpadre": "805",
+      "idunidad": "1621",
+      "nivel": "4",
+      "peso": "10",
+      "direcciones": [],
+      "padresConAtributos": [],
+      "recursos": [],
+      "significativa": {
+        "atributo": "",
+        "codigo": "",
+        "codigoDirectorioComun": "",
+        "denominacion": "",
+        "idunidad": "",
+        "recursos": []
+      }
+    },
+    {
+      "fechapeticion": "",
+      "idestructura": "1",
+      "idversion": "1",
+      "tipoversion": "C",
+      "codigo": "156920",
+      "codigoDirectorioComun": null,
+      "denominacion": "Enfermería",
+      "idestructurapral": "2",
+      "idpadre": "805",
+      "idunidad": "1622",
+      "nivel": "4",
+      "peso": "20",
+      "direcciones": [],
+      "padresConAtributos": [],
+      "recursos": [],
+      "significativa": {
+        "atributo": "",
+        "codigo": "",
+        "codigoDirectorioComun": "",
+        "denominacion": "",
+        "idunidad": "",
+        "recursos": []
+      }
+    },
+    {
+      "fechapeticion": "",
+      "idestructura": "1",
+      "idversion": "1",
+      "tipoversion": "C",
+      "codigo": "156930",
+      "codigoDirectorioComun": null,
+      "denominacion": "Administrativa",
+      "idestructurapral": "2",
+      "idpadre": "805",
+      "idunidad": "1623",
+      "nivel": "4",
+      "peso": "30",
+      "direcciones": [],
+      "padresConAtributos": [],
+      "recursos": [],
+      "significativa": {
+        "atributo": "",
+        "codigo": "",
+        "codigoDirectorioComun": "",
+        "denominacion": "",
+        "idunidad": "",
+        "recursos": []
+      }
+    },
+    {
+      "fechapeticion": "",
+      "idestructura": "1",
+      "idversion": "1",
+      "tipoversion": "C",
+      "codigo": "156940",
+      "codigoDirectorioComun": null,
+      "denominacion": "Celadores",
+      "idestructurapral": "2",
+      "idpadre": "805",
+      "idunidad": "1624",
+      "nivel": "4",
+      "peso": "40",
+      "direcciones": [],
+      "padresConAtributos": [],
+      "recursos": [],
+      "significativa": {
+        "atributo": "",
+        "codigo": "",
+        "codigoDirectorioComun": "",
+        "denominacion": "",
+        "idunidad": "",
+        "recursos": []
+      }
+    }
+  ]
+}

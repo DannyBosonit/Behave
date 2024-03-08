@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Report</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container-principal">
+        <h1 class="titulo_report">Test Report Genes</h1>
+    <!-- Contenedor para el gráfico -->
+    <div id="container-canva">
+        <canvas id="stepsChart"></canvas>
+    </div>
+    
+        <div class="header-feature">
+           <h2>Feature: Verify list endpoint of Genes</h2>
+            <p><strong>Total Steps Status:</strong> <span class="passed">passed</span></p>
+            <p><strong>Location:</strong> features/Apis.feature:6</p> 
+        </div>
+        
+        
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns Altos Cargos list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_altos_cargos</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "altosCargos"</td>
+                            <td class="passed">passed</td>
+                            <td>0.004044532775878906</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I set the query parameters: "GENERAL" with filtro idEstructura "1", idVersion "1", tipoVersion "C"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>11.25404143333435</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.006021976470947266</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "altos_cargos_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.00403285026550293</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns arbol padres list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_arbol_padres</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameArbolPadres"</td>
+                            <td class="passed">passed</td>
+                            <td>0.001043081283569336</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request paramams "GENERAL", "1", "1", "C", "0805"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010046958923339844</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009949207305908203</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoints</td>
+                            <td class="passed">passed</td>
+                            <td>0.3671095371246338</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.000997304916381836</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010051727294921875</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_arbol_padres_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.030994653701782227</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns arbol hijos list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_arbol_hijos</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameArbolHijos"</td>
+                            <td class="passed">passed</td>
+                            <td>0.000993490219116211</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request paramams "GENERAL", "1", "1", "C", "0805"</td>
+                            <td class="passed">passed</td>
+                            <td>0.001001596450805664</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010111331939697266</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoints</td>
+                            <td class="passed">passed</td>
+                            <td>0.26877260208129883</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_arbol_hijos_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.003000497817993164</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario: Returns busca unidades list 200</h3>
+            <p><strong>Tags:</strong> tc_get_busca_unidades</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "buscaUnidades"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009980201721191406</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params from JSON file "params_busca_unidades"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0020034313201904297</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010008811950683594</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>0.21242046356201172</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009975433349609375</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0020055770874023438</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns busca unidades list 200 v2 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_busca_unidades_v2</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "buscaUnidades"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010323524475097656</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params "GENERAL", "1", "1", "C", "null", "10", "null", "?", "?", "null", "?"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009975433349609375</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010006427764892578</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>0.16607403755187988</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009982585906982422</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010004043579101562</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "busca_unidades_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0029616355895996094</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario: Returns dame datos persona list 200</h3>
+            <p><strong>Tags:</strong> tc_get_dame_datos_personas</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameDatosPersona"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010027885437011719</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params nif "16474869S" and fecha</td>
+                            <td class="passed">passed</td>
+                            <td>0.002000093460083008</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010035037994384766</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoints</td>
+                            <td class="passed">passed</td>
+                            <td>0.35248684883117676</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0006172657012939453</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_datos_personas_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0040018558502197266</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns dame empleados list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_dame_empleados</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameEmpleado"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009968280792236328</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params empleados "GENERAL", "1", "1", "C"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010042190551757812</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009989738464355469</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>8.626435041427612</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009980201721191406</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009989738464355469</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_empleados_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.005877494812011719</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns dame historico persona list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_dame_historico_persona</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameHistoricoPersona"</td>
+                            <td class="passed">passed</td>
+                            <td>0.001003265380859375</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params historico personas "GENERAL", "1", "1", "C", "16565710Y"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009908676147460938</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>0.5807545185089111</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009975433349609375</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.002002716064453125</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_historico_persona_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.005877494812011719</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns dame personas con propiedades list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_dame_personas_con_propiedades</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "damePersonasConPropiedades"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0022974014282226562</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params personas con propiedades "GENERAL", "1", "1", "C", "5"</td>
+                            <td class="passed">passed</td>
+                            <td>0.001008749008178711</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.000997781753540039</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>10.149718523025513</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010409355163574219</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009937286376953125</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_personas_con_propiedades_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.003962039947509766</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns dame personas list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_dame_personas</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "damePersonas"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009989738464355469</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params dame personas "GENERAL", "1", "1", "C", "5"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010046958923339844</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>8.822807550430298</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009992122650146484</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_personas_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0035195350646972656</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns dame unidad list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_dame_unidad</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameUnidad"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009586811065673828</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params dame unidad "GENERAL", "1", "1", "C"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010004043579101562</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010001659393310547</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>3.4254562854766846</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.06899285316467285</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_unidad_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.01601576805114746</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns dame unidades list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_dame_unidades</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameUnidades"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010023117065429688</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params dame unidades "GENERAL", "1", "1", "C", "5"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009992122650146484</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.00099945068359375</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>0.3079991340637207</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_unidades_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.001996278762817383</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns dame unidades con el Codigo de Directorio Comun list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_dame_unidad_by_cdc</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameUnidadByCDC"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010013580322265625</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params dame unidade by cdc "GENERAL", "1", "1", "C", "A17014389"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009989738464355469</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>0.5041048526763916</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.000997304916381836</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.001990079879760742</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_unidades_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.005045890808105469</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+        <div class="body-feature">
+            <h3>Scenario Outline: Returns dame Unidades Hijas Con Padre list 200 -- @1.1 </h3>
+            <p><strong>Tags:</strong> tc_get_dame_unidades_hijas_con_padres</p>
+            <p><strong>Status:</strong> <span class="passed">passed</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>Given I prepare the URI "http://localhost:8500/genes/" request with path "dameUnidadesHijasConPadre"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0010421276092529297</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send request params dame unidade hijas con padre "GENERAL", "1", "1", "C", "1"</td>
+                            <td class="passed">passed</td>
+                            <td>0.0009527206420898438</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I prepare the request headers</td>
+                            <td class="passed">passed</td>
+                            <td>0.00200653076171875</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>When I send a "GET" request to the endpoint</td>
+                            <td class="passed">passed</td>
+                            <td>0.46076488494873047</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Then I should receive a status code of 200</td>
+                            <td class="passed">passed</td>
+                            <td>0.0016407966613769531</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And I capture and log the response details</td>
+                            <td class="passed">passed</td>
+                            <td>0.0020380020141601562</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>And The response must match the expected schema for "dame_unidades_hijas_con_padres_schema"</td>
+                            <td class="passed">passed</td>
+                            <td>0.007739543914794922</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+            
+         
+            
+
+        
+            
+
+    </div><!--End Container principar-->
+    
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Inicializar contadores para los pasos
+    let passedSteps = 0;
+    let failedSteps = 0;
+
+    // Seleccionar todos los elementos de la tabla que contienen los resultados de los pasos
+    const resultElements = document.querySelectorAll("td:nth-child(2)");
+
+    // Contar los pasos exitosos y fallidos
+    resultElements.forEach((element) => {
+        const result = element.textContent.trim();
+        if (result === "passed") {
+            passedSteps++;
+        } else if (result === "failed") {
+            failedSteps++;
+        }
+    });
+
+    // Calcular el total de pasos
+    const totalSteps = passedSteps + failedSteps;
+
+    // Porcentajes
+    const passedPercentage = (passedSteps / totalSteps) * 100;
+    const failedPercentage = (failedSteps / totalSteps) * 100;
+
+    // Configuración del gráfico
+    const ctx = document.getElementById('stepsChart').getContext('2d');
+    const stepsChart = new Chart(ctx, {
+        type: 'pie', // Tipo de gráfico
+        data: {
+            labels: [`Passed (${passedSteps})`, `Failed (${failedSteps})`], // Incluye la cantidad en los labels
+            datasets: [{
+                label: 'Steps Result',
+                data: [passedPercentage, failedPercentage],
+                backgroundColor: [
+                    'rgba(7, 176, 19, 0.8)', // Color para "Passed"
+                    'rgba(241, 19, 17, 0.8)' // Color para "Failed"
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Steps Results'
+                }
+            }
+        },
+    });
+});
+
+</script>
+
+</body>
+</html>

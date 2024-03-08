@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Report</title>
+    <link rel="stylesheet" type="text/css" href="../templates/css/styles.css">
+</head>
+<body>
+    <h1>Test Report Apis</h1>
+    {% for feature in json_data %}
+        <h2>Feature: {{ feature['name'] }}</h2>
+        <p><strong>Status:</strong> <span class="{{ feature['status'] }}">{{ feature['status'] }}</span></p>
+        <p><strong>Location:</strong> {{ feature['location'] }}</p>
+        {% for element in feature['elements'] %}
+            <h3>{{ element['keyword'] }}: {{ element['name'] }}</h3>
+            <p><strong>Tags:</strong> {{ element['tags'] | join(', ') }}</p>
+            <p><strong>Status:</strong> <span class="{{ element['status'] }}">{{ element['status'] }}</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for step in element['steps'] %}
+                        <tr>
+                            <td>{{ step['keyword'] }} {{ step['name'] }}</td>
+                            <td class="{{ step.get('result', {}).get('status', 'No Result') }}">{{ step.get('result', {}).get('status', 'No Result') }}</td>
+                            <td>{{ step.get('result', {}).get('duration', 'N/A') }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endfor %}
+    {% endfor %}
+
+    <h2>Request Details Log</h2>
+    <pre>{{ log_data }}</pre>
+</body>
+</html>

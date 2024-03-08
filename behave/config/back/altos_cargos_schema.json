@@ -1,0 +1,37 @@
+{
+  "error": true,
+  "excepciones": [
+    "string"
+  ],
+  "altosCargos": [
+    {
+      "correo": "string",
+      "denominacionCargo": "string",
+      "elemento": {
+        "codigo": "string",
+        "codigoDirectorioComun": "string",
+        "codigoPadres": "string",
+        "denominacion": "string",
+        "denominacionesPadres": "string",
+        "idElemento": 0,
+        "idPadres": "string"
+      },
+      "extension": "string",
+      "persona": {
+        "fechapeticion": "string",
+        "apellidos": "string",
+        "codigo": "string",
+        "correoe": "string",
+        "nif": "string",
+        "nombre": "string"
+      },
+      "puesto": {
+        "codigo": "string",
+        "denominacion": "string",
+        "esAltoCargo": true,
+        "id": 0
+      },
+      "telefono": "string"
+    }
+  ]
+}

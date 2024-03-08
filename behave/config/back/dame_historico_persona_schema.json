@@ -1,0 +1,158 @@
+{
+  "error": false,
+  "excepciones": [],
+  "personas": [
+    {
+      "fechapeticion": "05-03-2024",
+      "apellidos": "Capellán de Miguel",
+      "codigo": "P4963",
+      "correoe": "consejero.cult@larioja.org",
+      "nif": "16565710Y",
+      "nombre": "Gonzalo",
+      "cargo": "Consejero",
+      "correopersonal": "gcapellan@larioja.org",
+      "direccion": {
+        "codigoPostal": "",
+        "correoe": "",
+        "direccion": "",
+        "fax": "",
+        "horario": "",
+        "id": 0,
+        "observaciones": "",
+        "paginaWeb": "",
+        "poblacion": "",
+        "telefono": ""
+      },
+      "extension": "1660",
+      "habitual": false,
+      "idpersona": "P4963",
+      "puesto": {
+        "codigo": "CONSEJ",
+        "denominacion": "1-Consejero/a",
+        "esAltoCargo": true,
+        "id": 0
+      },
+      "receptor": false,
+      "responsable": true,
+      "telefono": "",
+      "tramita": false,
+      "unidad": {
+        "fechapeticion": "17-11-2014",
+        "idestructura": "1",
+        "idversion": "1",
+        "tipoversion": "C",
+        "codigo": "08",
+        "codigoDirectorioComun": "A17002947",
+        "denominacion": "Consejería de Educación, Cultura y Turismo",
+        "idestructurapral": "1",
+        "idpadre": null,
+        "idunidad": "232",
+        "nivel": "1",
+        "peso": "45",
+        "direcciones": [
+          {
+            "codigoPostal": "26005",
+            "correoe": "consejero.cult@larioja.org",
+            "direccion": "C/ Marqués de Murrieta, 76 Ala Este",
+            "fax": "941-291375",
+            "horario": "",
+            "id": 1,
+            "observaciones": "",
+            "paginaWeb": "",
+            "poblacion": "Logroño",
+            "telefono": "941-291660"
+          }
+        ],
+        "padresConAtributos": [],
+        "recursos": [],
+        "significativa": {
+          "atributo": "",
+          "codigo": "",
+          "codigoDirectorioComun": "",
+          "denominacion": "",
+          "idunidad": "",
+          "recursos": []
+        }
+      },
+      "fechaDesde": "11-07-2011",
+      "fechaHasta": "17-11-2014",
+      "tipoActualizacion": "A"
+    },
+    {
+      "fechapeticion": "05-03-2024",
+      "apellidos": "Capellán de Miguel",
+      "codigo": "P4963",
+      "correoe": "consejero.cult@larioja.org",
+      "nif": "16565710Y",
+      "nombre": "Gonzalo",
+      "cargo": "Consejero",
+      "correopersonal": "gcapellan@larioja.org",
+      "direccion": {
+        "codigoPostal": "",
+        "correoe": "",
+        "direccion": "",
+        "fax": "",
+        "horario": "",
+        "id": 0,
+        "observaciones": "",
+        "paginaWeb": "",
+        "poblacion": "",
+        "telefono": ""
+      },
+      "extension": "1660",
+      "habitual": false,
+      "idpersona": "P4963",
+      "puesto": {
+        "codigo": "CONSEJ",
+        "denominacion": "1-Consejero/a",
+        "esAltoCargo": true,
+        "id": 0
+      },
+      "receptor": false,
+      "responsable": true,
+      "telefono": "",
+      "tramita": false,
+      "unidad": {
+        "fechapeticion": "17-11-2014",
+        "idestructura": "1",
+        "idversion": "1",
+        "tipoversion": "C",
+        "codigo": "08",
+        "codigoDirectorioComun": "A17002947",
+        "denominacion": "Consejería de Educación, Cultura y Turismo",
+        "idestructurapral": "1",
+        "idpadre": null,
+        "idunidad": "232",
+        "nivel": "1",
+        "peso": "45",
+        "direcciones": [
+          {
+            "codigoPostal": "26005",
+            "correoe": "consejero.cult@larioja.org",
+            "direccion": "C/ Marqués de Murrieta, 76 Ala Este",
+            "fax": "941-291375",
+            "horario": "",
+            "id": 1,
+            "observaciones": "",
+            "paginaWeb": "",
+            "poblacion": "Logroño",
+            "telefono": "941-291660"
+          }
+        ],
+        "padresConAtributos": [],
+        "recursos": [],
+        "significativa": {
+          "atributo": "",
+          "codigo": "",
+          "codigoDirectorioComun": "",
+          "denominacion": "",
+          "idunidad": "",
+          "recursos": []
+        }
+      },
+      "fechaDesde": "17-11-2014",
+      "fechaHasta": "17-11-2014",
+      "tipoActualizacion": "B"
+    }
+  ]
+}

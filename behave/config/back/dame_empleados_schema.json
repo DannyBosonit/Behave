@@ -1,0 +1,16 @@
+{
+  "error": true,
+  "excepciones": [
+    "string"
+  ],
+  "empleados": [
+    {
+      "fechapeticion": "string",
+      "apellidos": "string",
+      "codigo": "string",
+      "correoe": "string",
+      "nif": "string",
+      "nombre": "string"
+    }
+  ]
+}

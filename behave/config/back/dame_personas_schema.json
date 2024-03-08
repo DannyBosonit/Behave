@@ -1,0 +1,114 @@
+{
+  "error": true,
+  "excepciones": [
+    "string"
+  ],
+  "personas": [
+    {
+      "fechapeticion": "string",
+      "apellidos": "string",
+      "codigo": "string",
+      "correoe": "string",
+      "nif": "string",
+      "nombre": "string",
+      "cargo": "string",
+      "correopersonal": "string",
+      "direccion": {
+        "codigoPostal": "string",
+        "correoe": "string",
+        "direccion": "string",
+        "fax": "string",
+        "horario": "string",
+        "id": 0,
+        "observaciones": "string",
+        "paginaWeb": "string",
+        "poblacion": "string",
+        "telefono": "string"
+      },
+      "extension": "string",
+      "habitual": true,
+      "idpersona": "string",
+      "puesto": {
+        "codigo": "string",
+        "denominacion": "string",
+        "esAltoCargo": true,
+        "id": 0
+      },
+      "receptor": true,
+      "responsable": true,
+      "telefono": "string",
+      "tramita": true,
+      "unidad": {
+        "fechapeticion": "string",
+        "idestructura": "string",
+        "idversion": "string",
+        "tipoversion": "string",
+        "codigo": "string",
+        "codigoDirectorioComun": "string",
+        "denominacion": "string",
+        "idestructurapral": "string",
+        "idpadre": "string",
+        "idunidad": "string",
+        "nivel": "string",
+        "peso": "string",
+        "direcciones": [
+          {
+            "codigoPostal": "string",
+            "correoe": "string",
+            "direccion": "string",
+            "fax": "string",
+            "horario": "string",
+            "id": 0,
+            "observaciones": "string",
+            "paginaWeb": "string",
+            "poblacion": "string",
+            "telefono": "string"
+          }
+        ],
+        "padresConAtributos": [
+          {
+            "atributo": "string",
+            "codigo": "string",
+            "codigoDirectorioComun": "string",
+            "denominacion": "string",
+            "idunidad": "string",
+            "recursos": [
+              {
+                "codigo": "string",
+                "denominacion": "string",
+                "idunidad": "string",
+                "recurso": "string",
+                "url": "string"
+              }
+            ]
+          }
+        ],
+        "recursos": [
+          {
+            "codigo": "string",
+            "denominacion": "string",
+            "idunidad": "string",
+            "recurso": "string",
+            "url": "string"
+          }
+        ],
+        "significativa": {
+          "atributo": "string",
+          "codigo": "string",
+          "codigoDirectorioComun": "string",
+          "denominacion": "string",
+          "idunidad": "string",
+          "recursos": [
+            {
+              "codigo": "string",
+              "denominacion": "string",
+              "idunidad": "string",
+              "recurso": "string",
+              "url": "string"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

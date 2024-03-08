@@ -1,0 +1,22 @@
+{
+  "error": true,
+  "excepciones": [
+    "string"
+  ],
+  "datosPersona": {
+    "fechapeticion": "string",
+    "apellidos": "string",
+    "codigo": "string",
+    "correoe": "string",
+    "nif": "string",
+    "nombre": "string",
+    "estructuras": [
+      {
+        "codigo": "string",
+        "denominacion": "string",
+        "denominacionResumida": "string",
+        "id": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Report</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container-principal">
+        <h1 class="titulo_report">Test Report Genes</h1>
+    <!-- Contenedor para el gráfico -->
+    <div id="container-canva">
+        <canvas id="stepsChart"></canvas>
+    </div>
+    {% for feature in json_data %}
+        <div class="header-feature">
+           <h2>Feature: {{ feature['name'] }}</h2>
+            <p><strong>Total Steps Status:</strong> <span class="{{ feature['status'] }}">{{ feature['status'] }}</span></p>
+            <p><strong>Location:</strong> {{ feature['location'] }}</p> 
+        </div>
+        
+        {% for element in feature['elements'] %}
+        <div class="body-feature">
+            <h3>{{ element['keyword'] }}: {{ element['name'] }}</h3>
+            <p><strong>Tags:</strong> {{ element['tags'] | join(', ') }}</p>
+            <p><strong>Status:</strong> <span class="{{ element['status'] }}">{{ element['status'] }}</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Result</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for step in element['steps'] %}
+                        <tr>
+                            <td>{{ step['keyword'] }} {{ step['name'] }}</td>
+                            <td class="{{ step.get('result', {}).get('status', 'No Result') }}">{{ step.get('result', {}).get('status', 'No Result') }}</td>
+                            <td>{{ step.get('result', {}).get('duration', 'N/A') }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+            {% endfor %}
+         {% endfor %}
+            
+
+        
+            
+
+    </div><!--End Container principar-->
+    
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Inicializar contadores para los pasos
+    let passedSteps = 0;
+    let failedSteps = 0;
+
+    // Seleccionar todos los elementos de la tabla que contienen los resultados de los pasos
+    const resultElements = document.querySelectorAll("td:nth-child(2)");
+
+    // Contar los pasos exitosos y fallidos
+    resultElements.forEach((element) => {
+        const result = element.textContent.trim();
+        if (result === "passed") {
+            passedSteps++;
+        } else if (result === "failed") {
+            failedSteps++;
+        }
+    });
+
+    // Calcular el total de pasos
+    const totalSteps = passedSteps + failedSteps;
+
+    // Porcentajes
+    const passedPercentage = (passedSteps / totalSteps) * 100;
+    const failedPercentage = (failedSteps / totalSteps) * 100;
+
+    // Configuración del gráfico
+    const ctx = document.getElementById('stepsChart').getContext('2d');
+    const stepsChart = new Chart(ctx, {
+        type: 'pie', // Tipo de gráfico
+        data: {
+            labels: [`Passed (${passedSteps})`, `Failed (${failedSteps})`], // Incluye la cantidad en los labels
+            datasets: [{
+                label: 'Steps Result',
+                data: [passedPercentage, failedPercentage],
+                backgroundColor: [
+                    'rgba(7, 176, 19, 0.8)', // Color para "Passed"
+                    'rgba(241, 19, 17, 0.8)' // Color para "Failed"
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Steps Results'
+                }
+            }
+        },
+    });
+});
+
+</script>
+
+</body>
+</html>

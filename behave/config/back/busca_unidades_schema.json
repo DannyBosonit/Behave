@@ -1,0 +1,50 @@
+{
+  "error": true,
+  "excepciones": [
+    "string"
+  ],
+  "unidades": [
+    {
+      "fechapeticion": "string",
+      "idestructura": "string",
+      "idversion": "string",
+      "tipoversion": "string",
+      "codigo": "string",
+      "codpadres": "string",
+      "denominacion": "string",
+      "denompadres": "string",
+      "idestructurapral": "string",
+      "idspadres": "string",
+      "idunidad": "string",
+      "nivel": "string",
+      "padresConAtributos": [
+        {
+          "atributo": "string",
+          "codigo": "string",
+          "codigoDirectorioComun": "string",
+          "denominacion": "string",
+          "idunidad": "string",
+          "recursos": [
+            {
+              "codigo": "string",
+              "denominacion": "string",
+              "idunidad": "string",
+              "recurso": "string",
+              "url": "string"
+            }
+          ]
+        }
+      ],
+      "peso": "string",
+      "recursos": [
+        {
+          "codigo": "string",
+          "denominacion": "string",
+          "idunidad": "string",
+          "recurso": "string",
+          "url": "string"
+        }
+      ]
+    }
+  ]
+}

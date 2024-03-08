@@ -1,0 +1,56 @@
+{
+  "error": false,
+  "excepciones": [],
+  "unidades": [
+    {
+      "fechapeticion": "",
+      "idestructura": "1",
+      "idversion": "1",
+      "tipoversion": "C",
+      "codigo": "15",
+      "codigoDirectorioComun": "A17016057",
+      "denominacion": "Servicio Riojano de Salud",
+      "idestructurapral": "2",
+      "idpadre": "13032",
+      "idunidad": "751",
+      "nivel": "2",
+      "peso": "530",
+      "direcciones": [],
+      "padresConAtributos": [],
+      "recursos": [],
+      "significativa": {
+        "atributo": "",
+        "codigo": "",
+        "codigoDirectorioComun": "",
+        "denominacion": "",
+        "idunidad": "",
+        "recursos": []
+      }
+    },
+    {
+      "fechapeticion": "",
+      "idestructura": "1",
+      "idversion": "1",
+      "tipoversion": "C",
+      "codigo": "C07",
+      "codigoDirectorioComun": "A17029382",
+      "denominacion": "Consejería de Salud y Políticas Sociales",
+      "idestructurapral": "1",
+      "idpadre": null,
+      "idunidad": "13032",
+      "nivel": "1",
+      "peso": "17",
+      "direcciones": [],
+      "padresConAtributos": [],
+      "recursos": [],
+      "significativa": {
+        "atributo": "",
+        "codigo": "",
+        "codigoDirectorioComun": "",
+        "denominacion": "",
+        "idunidad": "",
+        "recursos": []
+      }
+    }
+  ]
+}
