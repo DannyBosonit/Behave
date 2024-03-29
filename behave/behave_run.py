@@ -8,7 +8,7 @@ import time
 
 def run_behave_tests():
     sys.argv = sys.argv[:1]  # Limpia los argumentos existentes de sys.argv excepto el nombre del script
-    allure_result_folder = "output/reports/allure-results"
+
     sys.argv.extend([
         "features/Apis.feature",
         #'--no-capture',
@@ -35,12 +35,13 @@ def generate_html_report():
     with open(json_file_path) as json_file:
         json_data = json.load(json_file)
 
+    file_template = "genes_report_template.html"
     env = Environment(loader=FileSystemLoader('output/templates/'))
-    template = env.get_template('genes_report_template.html')
+    template = env.get_template(file_template)
     html_output = template.render(json_data=json_data)
 
     # Generar o sobrescribir el reporte HTML
-    with open(final_report_path, 'w') as html_file:
+    with open(final_report_path, 'w', encoding='utf-8') as html_file:
         html_file.write(html_output)
     print("Reporte HTML generado exitosamente.")
 

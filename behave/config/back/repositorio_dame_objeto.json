@@ -1,0 +1,86 @@
+{
+  "iden": "236240",
+  "objetoRepositable": {
+    "codigo": "string",
+    "documento": {
+      "asunto": "string",
+      "codigoAplicacion": "string",
+      "codigoCopiaVerificable": "string",
+      "contenidos": [
+        {
+          "bytes": [
+            "string"
+          ],
+          "codigo": "string",
+          "firmantes": [
+            {
+              "apellido1": "string",
+              "apellido2": "string",
+              "cif": "string",
+              "email": "string",
+              "entidad": "string",
+              "nif": "string",
+              "nombre": "string",
+              "organizacionEmisora": "string",
+              "tipoCertificado": 0
+            }
+          ],
+          "mimeType": "string",
+          "nombre": "string",
+          "procedimiento": "string",
+          "tipo": "string",
+          "utilizable": "string",
+          "verificado": "string",
+          "visualizable": "string"
+        }
+      ],
+      "fechaCaducidad": {
+        "fecha": "string"
+      },
+      "fechaCreacion": {
+        "fecha": "string"
+      },
+      "formularios": [
+        {
+          "campos": [
+            {
+              "etiqueta": "string",
+              "infoExtendida": "string",
+              "valor": "string"
+            }
+          ],
+          "codigo": "string",
+          "nombre": "string"
+        }
+      ],
+      "iden": "string",
+      "nifTitular": "string",
+      "nivel": "string",
+      "nombreTitular": "string",
+      "referencia": "string",
+      "secu": "string",
+      "subtipoDocumento": "string",
+      "tipoDocumento": "string"
+    },
+    "elemento": "string",
+    "encriptar": true,
+    "estructura": "string",
+    "firma": {
+      "firma": "string"
+    },
+    "iden": "string",
+    "nifDepositario": "string",
+    "nombreDepositario": "string",
+    "secu": "string",
+    "sistema": "string",
+    "timeStamp": {
+      "fecha": {
+        "fecha": "string"
+      },
+      "token": "string"
+    },
+    "tipoVersion": "string",
+    "version": "string"
+  },
+  "secu": "1"
+}

@@ -1,23 +1,11 @@
-
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
-        
-}     
-h1.titulo_report{
-    width: 100%;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 1.0);
-    text-align: center;
-    color: white;
-    letter-spacing: 3px;
-    word-spacing: 2px;
-    font-size: 35pt;
-    padding: 20px;
 }
 #container-canva{
     width: 100%;
@@ -26,64 +14,157 @@ h1.titulo_report{
     justify-content: center;
     align-items: center;
     padding: 25px;
-  
+
 }
-.header-feature{
+
+#container-duration-canva {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Estilos para el título del informe */
+h1.titulo_report {
     width: 100%;
     height: 100px;
-    padding: 15px;
-   
+    background: linear-gradient(45deg, #4CAF50, #FFC107); /* Gradiente de color */
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 50px;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
+    font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+    animation: fadeInDown 1s ease; /* Animación */
 }
-.header-feature h2{
+
+/* Animación para el título */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor principal */
+.container-principal {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Transición al pasar el cursor */
+}
+
+.container-principal:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+}
+
+/* Estilos para los elementos de cabecera y cuerpo */
+.header-feature, .body-feature {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para el encabezado */
+.header-feature {
+    background-color: #007bff;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.header-feature h2 {
     margin-bottom: 10px;
     letter-spacing: 1px;
     word-spacing: 3px;
-    font-size: 22pt;
-}
-.header-feature p{
-    margin-bottom: 5px;
+    font-size: 26px !important;
 }
 
-h2, h3 {
-            color: #333;
-}
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .passed {
-            color: #007700; /* Text in green */
-        }
-        .failed {
-            color: #DD0000; /* Text in red */
-        }
-        pre {
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
 
-div.body-feature{
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 10px;
-    
+.header-feature:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el cursor */
 }
-.body-feature h3{
+
+/* Estilos específicos para el cuerpo */
+.body-feature:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Cambio de sombra al pasar el cursor */
+}
+
+/* Estilos para los títulos dentro de los elementos de cabecera y cuerpo */
+.header-feature h2, .body-feature h3 {
     text-align: center;
-    font-size: 20pt;
-}
-.body-feature p{
+    font-size: 22px;
     margin-bottom: 10px;
+}
+
+.passed {
+    color: #007700;
+    /* Text in green */
+}
+
+.failed {
+    color: #DD0000;
+    /* Text in red */
+}
+
+#totalSteps {
+
+    text-align: center;
+}
+
+/* Estilos para los párrafos dentro de los elementos de cabecera y cuerpo */
+.header-feature p, .body-feature p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.duration-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 13px;
+}
+
+/* Estilos para la tabla */
+.body-feature table {
+    width: 100%;
+}
+
+/* Estilos para los enlaces */
+.titulo_report:hover {
+    color: #000000;
+}
+
+td.long-number {
+    padding-left: 10px !important;
+}
+
+
+/* QUITAR AL TERMINAR */
+
+td:nth-child(2) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td:nth-child(3) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 18px;
 }
 

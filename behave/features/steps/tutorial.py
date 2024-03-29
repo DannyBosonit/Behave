@@ -38,10 +38,10 @@ def insert_user_pswd(context, user, paswd):
     # Esperar a que se cargue la página de inicio de sesión
     WebDriverWait(context.driver, 10).until(EC.url_contains("dashboard"))
 
+
 @step(u"Cerrando web")
 def cerrar_navegador(context):
     context.driver.quit()
-
 
 
 @step('Ejecutando otros steps')
@@ -57,4 +57,3 @@ def ejecutando_steps(context):
         Then I should receive a status code of 200
         And I capture and log the response details
         """)
-

@@ -1,0 +1,174 @@
+pipeline {
+    agent any
+
+    // Definimos una función global para manejar las respuestas de la API
+    environment {
+        BASE_URI = 'http://host.docker.internal:8500/genes/'
+    }
+
+    stages {
+        stage('Test API Endpoint - Altos Cargos') {
+            steps {
+                script {
+                    testApiEndpoint('altosCargos?sistema=GENERAL&idestructura=1&idversion=1&tipoversion=C')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Arbol Padres') {
+            steps {
+                script {
+                    testApiEndpoint('dameArbolPadres?sistema=GENERAL&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=1087')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Arbol Hijos') {
+            steps {
+                script {
+                    testApiEndpoint('dameArbolHijos?sistema=GENERAL&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=1087')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Busca Unidades') {
+            steps {
+                 script {
+                    testApiEndpoint('buscaUnidades?sistema=GENERAL&desde=&numeroregistros=10&idestructura=1&idversion=1&tipoversion=C&atributosPadres=&denominacion=%3F&orden=%3F&recursos=&tipo=%3F')
+                 }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Datos Persona') {
+            steps {
+                script {
+                    testApiEndpoint('dameDatosPersona?fecha=&nif=16565710Y')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Historico Persona') {
+            steps {
+                script {
+                    testApiEndpoint('dameHistoricoPersona?sistema=GENERAL&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=&atributosPadres=&nif=16565710Y&sinActivos=true&tipoMovimiento=')
+                }
+            }
+        }
+        stage('Test API Endpoint - Dame Personas Con Propiedades') {
+            steps {
+                script {
+                    testApiEndpoint('damePersonasConPropiedades?sistema=GENERAL&desde=&numeroregistros=5&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=&codigounidadpadre=&idelementopadre=&idpersona=&atributoPadre=&atributosPadres=&autorizadotramitar=&codigoelemento=&nif=&nifnulos=&nombre=&orden=&recibirnotificacion=&tramitadorhabitual=&altoCargo=&aplicacion=&buscarEnUnidadesDependientes=&esResponsable=&idCargo=0&procedimiento=&propiedad=')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Empleado') {
+            steps {
+                script {
+                    testApiEndpoint('dameEmpleado?sistema=GENERAL&desde=&numeroregistros=10&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=&codpersona=&correoe=&nif=&nombre=&orden=')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Personas') {
+            steps {
+                script {
+                    testApiEndpoint('damePersonas?sistema=GENERAL&desde=&numeroregistros=5&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=&codigounidadpadre=&idelementopadre=&idpersona=&atributoPadre=&atributosPadres=&autorizadotramitar=&codigoelemento=&nif=&nifnulos=&nombre=&orden=&recibirnotificacion=&tramitadorhabitual=')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Unidad') {
+            steps {
+                script {
+                    testApiEndpoint('dameUnidad?sistema=GENERAL&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=&codigounidadpadre=&idelementopadre=&idpersona=&atributo=&atributoPadre=&atributosPadres=&codigounidad=&codigounidadhijo=&denominacion=&idelementohijo=&nif=&orden=&recursos=&rellenarPesos=true')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Unidades') {
+            steps {
+                script {
+                    testApiEndpoint('dameUnidades?sistema=GENERAL&desde=&numeroregistros=5&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=&codigounidadpadre=&idelementopadre=&idpersona=&atributo=&atributoPadre=&atributosPadres=&codigounidad=&codigounidadhijo=&denominacion=&idelementohijo=&nif=&orden=&recursos=&rellenarPesos=true')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Unidades Hijas Con Padre') {
+            steps {
+                script {
+                    testApiEndpoint('dameUnidadesHijasConPadre?sistema=GENERAL&idestructura=1&idversion=1&tipoversion=C&fecha=&idelemento=1')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - Dame Unidad By CDC') {
+            steps {
+                script {
+                    testApiEndpoint('dameUnidadByCDC?sistema=GENERAL&idestructura=1&idversion=1&tipoversion=C&fecha=&cdc=A17014389')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - getElementosPersonalConAmbito') {
+            steps {
+                script {
+                    testApiEndpoint('getElementosPersonalConAmbito?sistema=GENERAL&idEstructura=1&idVersion=1&tipoVersion=C&aplicacion=OFIVIR&idElemento=1087&procedimiento=&propiedad=')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - getElementosPersonalConAmbitoPadres') {
+            steps {
+                script {
+                    testApiEndpoint('getElementosPersonalConAmbitoPadres?sistema=GENERAL&idEstructura=1&idVersion=1&tipoVersion=C&aplicacion=OFIVIR&idElemento=1087&procedimiento=&propiedad=')
+                }
+            }
+        }
+
+        stage('Test API Endpoint - getElementosPersonalPropConAmbito') {
+            steps {
+                script {
+                    testApiEndpoint('getElementosPersonalPropConAmbito?sistema=GENERAL&idEstructura=1&idVersion=1&tipoVersion=C&aplicacion=OFIVIR&idElemento=1087&procedimiento=&propiedad=')
+                }
+            }
+        }
+
+
+        stage('Test API Endpoint - getPropiedadesPersona') {
+            steps {
+                script {
+                    testApiEndpoint('getPropiedadesPersona?sistema=GENERAL&idEstructura=1&idVersion=1&tipoVersion=C&aplicacion=OFIVIR&idElemento=1087&procedimiento=&propiedad=&nif=16545556T')
+                }
+            }
+        }
+
+
+    }// end stages
+}
+
+// Esta función maneja la llamada a la API y procesa la respuesta
+def testApiEndpoint(String endpoint) {
+    def apiUrl = "${env.BASE_URI}${endpoint}"
+    def responseCode = sh(script: "curl -s -o response.txt -w '%{http_code}' '${apiUrl}'", returnStdout: true).trim()
+    def responseBody = readFile('response.txt').trim()
+    sh 'rm response.txt'
+    
+    switch (responseCode) {
+        case '400':
+            echo "Error 400: Bad Request. Respuesta: ${responseBody}"
+            break
+        case '404':
+            echo "Error 404: Not Found. Respuesta: ${responseBody}"
+            break
+        case '500':
+            echo "Error 500: Internal Server Error. Respuesta: ${responseBody}"
+            break
+        case '504':
+            echo "Error 504: Gateway Timeout. Respuesta: ${responseBody}"
+            break
+        default:
+            echo "API Response: ${responseBody}"
+            break
+    }
+}

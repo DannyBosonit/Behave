@@ -1,0 +1,41 @@
+{
+  "error": true,
+  "excepciones": [
+    "string"
+  ],
+  "elementosPersonal": [
+    {
+      "elemento": {
+        "codigo": "string",
+        "codigoDirectorioComun": "string",
+        "codigoPadres": "string",
+        "denominacion": "string",
+        "denominacionesPadres": "string",
+        "idElemento": 0,
+        "idPadres": "string"
+      },
+      "personal": {
+        "fechapeticion": "string",
+        "apellidos": "string",
+        "codigo": "string",
+        "correoe": "string",
+        "nif": "string",
+        "nombre": "string",
+        "cargo": "string",
+        "correo": "string",
+        "extension": "string",
+        "responsable": true,
+        "telefono": "string"
+      },
+      "unidadPersona": {
+        "codigo": "string",
+        "codigoDirectorioComun": "string",
+        "codigoPadres": "string",
+        "denominacion": "string",
+        "denominacionesPadres": "string",
+        "idElemento": 0,
+        "idPadres": "string"
+      }
+    }
+  ]
+}
