@@ -10,10 +10,10 @@ def run_behave_tests():
     sys.argv = sys.argv[:1]  # Limpia los argumentos existentes de sys.argv excepto el nombre del script
 
     sys.argv.extend([
-        "features/Apis.feature",
-        #'--no-capture',
+        "features/firma.feature",
+        '--no-capture',
         '--no-skipped',
-        "--tags=Get_genes",
+        "--tags=Post_firma",
         "--format=json",
         "--outfile=output/report.json",
     ])
@@ -35,7 +35,7 @@ def generate_html_report():
     with open(json_file_path) as json_file:
         json_data = json.load(json_file)
 
-    file_template = "genes_report_template.html"
+    file_template = "report_template.html"
     env = Environment(loader=FileSystemLoader('output/templates/'))
     template = env.get_template(file_template)
     html_output = template.render(json_data=json_data)

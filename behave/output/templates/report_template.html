@@ -21,17 +21,17 @@
   </head>
   <body>
     <div class="container">
-      
+      {% for tags in json_data %}
       <div class="row d-flex justify-content-around">
-        <h1 class="col titulo_report text-xxl-end m-0">Firma_Report</h1>
+        <h1 class="col titulo_report text-xxl-end m-0">{{ tags ['tags'] [1] }}</h1>
         <div class="col d-flex justify-content-end align-items-end">
-          <p><b>Project name:</b> administracion_La_Rioja</p>
-          <p><b>Tests Cases:</b> Post_firma</p>
-          <p><b>Enviroment:</b> dev</p>
-          <p><b>Version:</b> tcs_0.0.1</p>
+          <p><b>Project name:</b> {{ tags ['tags'] [0] }}</p>
+          <p><b>Tests Cases:</b> {{ tags ['tags'] [2] }}</p>
+          <p><b>Enviroment:</b> {{ tags ['tags'] [3] }}</p>
+          <p><b>Version:</b> {{ tags ['tags'] [4] }}</p>
         </div>
       </div>
-      
+      {% endfor %}
       <hr class="m-0 border border-primary border-3 rounded-pill" />
 
       <div class="row">
@@ -48,23 +48,23 @@
 
       <br />
       <h4 id="totalSteps">Total Steps:</h4>
-      
+      {% for feature in json_data %}
       <div class="header-feature mb-3">
-        <h2>Feature: Feature: Verify signing endpoint for PDF and XML files</h2>
+        <h2>Feature: Feature: {{ feature['name'] }}</h2>
         <p>
           <strong>Total Steps Status:</strong>
-          <span class="passed">passed</span>
+          <span class="{{ feature['status'] }}">{{ feature['status'] }}</span>
         </p>
-        <p><strong>Location:</strong> features/firma.feature:19</p>
+        <p><strong>Location:</strong> {{ feature['location'] }}</p>
         <p><strong>Date: </strong><span id="currentDateTime"></span></p>
       </div>
 
 
-      
+      {% for element in feature['elements'] %}
       <div class="body-feature">
-        <h3>Scenario: Firma de documento PDF</h3>
-        <p><strong>Tags:</strong> tc_firma_de_documento_PDF</p>
-        <p><strong>Status:</strong> <span class="passed">passed</span></p>
+        <h3>{{ element['keyword'] }}: {{ element['name'] }}</h3>
+        <p><strong>Tags:</strong> {{ element['tags'] | join(', ') }}</p>
+        <p><strong>Status:</strong> <span class="{{ element['status'] }}">{{ element['status'] }}</span></p>
         <table>
           <thead>
             <tr>
@@ -74,128 +74,21 @@
             </tr>
           </thead>
           <tbody>
-            
+            {% for step in element['steps'] %}
             <tr>
               <td>
-                <span class="first-word">Given I have the PDF file</span>
+                <span class="first-word">{{ step['keyword'] }} {{ step['name'] }}</span>
               </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.002962350845336914">
-                0.002962350845336914
-              </td>
-            </tr>
-            
-            <tr>
-              <td>
-                <span class="first-word">When I set the request body for PDF signing with alias "pruebas" and password "sabeurp"</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0010399818420410156">
-                0.0010399818420410156
+              <td class="{{ step.get('result', {}).get('status', 'No Result') }}">{{ step.get('result', {}).get('status', 'No Result') }}</td>
+              <td class="duration-cell" data-duration="{{ step.get('result', {}).get('duration', 'N/A') }}">
+                {{ step.get('result', {}).get('duration', 'N/A') }}
               </td>
             </tr>
-            
-            <tr>
-              <td>
-                <span class="first-word">And I set the request headers as follows</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0010030269622802734">
-                0.0010030269622802734
-              </td>
-            </tr>
-            
-            <tr>
-              <td>
-                <span class="first-word">And I send a "POST" request to "http://localhost:8502/firma/serverSignature"</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.25215983390808105">
-                0.25215983390808105
-              </td>
-            </tr>
-            
-            <tr>
-              <td>
-                <span class="first-word">Then the response status code should be 200</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0">
-                0.0
-              </td>
-            </tr>
-            
+            {% endfor %}
           </tbody>
         </table>
-          
-      <div class="body-feature">
-        <h3>Scenario: Firma de documento XML</h3>
-        <p><strong>Tags:</strong> tc_firma_de_documento_XML</p>
-        <p><strong>Status:</strong> <span class="passed">passed</span></p>
-        <table>
-          <thead>
-            <tr>
-              <th>Step</th>
-              <th class="text-center">Result</th>
-              <th>Duration (s)</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <tr>
-              <td>
-                <span class="first-word">Given I have the XML file</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.001039266586303711">
-                0.001039266586303711
-              </td>
-            </tr>
-            
-            <tr>
-              <td>
-                <span class="first-word">When I set the request body for XML signing with alias "pruebas" and password "sabeurp"</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0009622573852539062">
-                0.0009622573852539062
-              </td>
-            </tr>
-            
-            <tr>
-              <td>
-                <span class="first-word">And I set the request headers as follows</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0010085105895996094">
-                0.0010085105895996094
-              </td>
-            </tr>
-            
-            <tr>
-              <td>
-                <span class="first-word">And I send a "POST" request to "http://localhost:8502/firma/serverSignature"</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.3804478645324707">
-                0.3804478645324707
-              </td>
-            </tr>
-            
-            <tr>
-              <td>
-                <span class="first-word">Then the response status code should be 200</span>
-              </td>
-              <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0010006427764892578">
-                0.0010006427764892578
-              </td>
-            </tr>
-            
-          </tbody>
-        </table>
-          
-        
+          {% endfor %}
+        {% endfor %}
       </div>
 
       <footer class="pt-3 pb-5">

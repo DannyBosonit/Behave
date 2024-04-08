@@ -1,10 +1,12 @@
 import json
+from base64 import b64encode
 from os.path import join, dirname
 from urllib.parse import urljoin
 import requests
 from behave import *
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
+import os
 
 
 @step('I prepare the URI "{uri_base}" request with path "{path}"')
@@ -138,3 +140,163 @@ def step_validate_response_schema(context, schema_filename):
         # If validation fails, print error message and assert False to fail the step
         print(f"The response does not match the expected schema: {e.message}")
         assert False, f"Schema validation failed: {e}"
+
+
+@step('I have the PDF file')
+def step_given_have_pdf_file(context):
+    """
+    Verifies that the specified PDF file exists and loads its content into the context.
+
+    :param context: The test context.
+    :return: None
+    """
+    file_path = os.path.abspath(os.path.join(dirname(__file__), '../../config/files/dummy.pdf'))
+    print(f"Loading PDF file from: {file_path}")
+    try:
+        with open(file_path, 'rb') as file:
+            context.file_content = file.read()
+    except FileNotFoundError:
+        assert False, f"The PDF file '{file_path}' does not exist"
+    except Exception as e:
+        print(f"An error occurred while loading the PDF file: {e}")
+        assert False, f"Error loading PDF file: {e}"
+
+
+@step('I set the request body for PDF signing with alias "{alias}" and password "{password}"')
+def step_when_set_request_body_pdf(context, alias, password):
+    """
+    Sets the request body for PDF signing with the provided alias and password, replacing the placeholder with the PDF file content.
+
+    :param context: The test context.
+    :param alias: The alias for the PDF document.
+    :param password: The password for the PDF document.
+    :return: None
+    """
+    print("Setting request body for PDF signing...")
+    context.request_body = {
+        "archive": "<base64_encoded_pdf_file>",
+        "format": "PDF",
+        "properties": {
+            "alias": alias,
+            "pwd": password
+        }
+    }
+    # Encode the PDF file content to base64 and replace the placeholder in the request body
+    encoded_pdf_file = b64encode(context.file_content).decode('utf-8')
+    context.request_body['archive'] = encoded_pdf_file
+
+
+@step('I have the XML file')
+def step_given_have_xml_file(context):
+    """
+    Verifies that the specified XML file exists and loads its content into the context.
+
+    :param context: The test context.
+    :return: None
+    """
+    file_path = os.path.abspath(os.path.join(dirname(__file__), '../../config/files/dummy.xml'))
+    print(f"Loading XML file from: {file_path}")
+    try:
+        with open(file_path, 'rb') as file:
+            context.file_content = file.read()
+    except FileNotFoundError:
+        assert False, f"The XML file '{file_path}' does not exist"
+    except Exception as e:
+        print(f"An error occurred while loading the XML file: {e}")
+        assert False, f"Error loading XML file: {e}"
+
+
+@step('I set the request body for XML signing with alias "{alias}" and password "{password}"')
+def step_when_set_request_body_xml(context, alias, password):
+    """
+    Sets the request body for XML signing with the provided alias and password, replacing the placeholder with the XML file content.
+
+    :param context: The test context.
+    :param alias: The alias for the XML document.
+    :param password: The password for the XML document.
+    :return: None
+    """
+    print("Setting request body for XML signing...")
+    context.request_body = {
+        "archive": "<base64_encoded_xml_file>",
+        "format": "XML",
+        "properties": {
+            "alias": alias,
+            "pwd": password
+        }
+    }
+    # Encode the XML file content to base64 and replace the placeholder in the request body
+    encoded_xml_file = b64encode(context.file_content).decode('utf-8')
+    context.request_body['archive'] = encoded_xml_file
+
+
+@step('I set the request headers as follows')
+def step_when_set_request_headers(context):
+    """
+    Sets the request headers with the provided key-value pairs.
+
+    :param context: The test context.
+    :return: None
+    """
+    print("Setting request headers...")
+    # Parse and store the request headers from the provided table
+    context.request_headers = {row['Content-Type']: row['application/json'] for row in context.table}
+
+
+@step('I send a "{method}" request to "{url}"')
+def step_when_send_request(context, method, url):
+    """
+    Sends a HTTP request with the specified method to the provided URL.
+
+    :param context: The test context.
+    :param method: The HTTP method (GET, POST, PUT, DELETE, etc.).
+    :param url: The URL to send the request to.
+    :return: None
+    """
+    print(f"Sending {method} request to: {url}")
+    # Send the HTTP request using the specified method, headers, and request body
+    response = requests.request(method, url, headers=context.request_headers, json=context.request_body)
+
+    # Store the response in the context for later use
+    context.response = response
+
+
+@step('the response status code should be {status_code}')
+def step_then_check_response_status_code(context, status_code):
+    """
+    Verifies that the response status code matches the expected code.
+
+    :param context: The test context.
+    :param status_code: The expected HTTP status code.
+    :return: None
+    """
+    print(f"Verifying response status code...")
+    # Assert that the response status code matches the expected code
+    assert context.response.status_code == int(
+        status_code), f"Expected status code {status_code}, but got {context.response.status_code}"
+
+
+@step('The response must match the expected schema "{schema_filename}"')
+def step_validate_response_schema(context, schema_filename):
+    """
+    Validates if the response matches the expected schema specified by the schema filename.
+
+    :param context: The test context.
+    :param schema_filename: The filename of the schema.
+    :return: None
+    """
+    try:
+        # Load the expected schema from the schema file
+        schema_file_path = os.path.abspath(os.path.join(dirname(__file__), f'../../config/back/{schema_filename}.json'))
+        with open(schema_file_path, 'r') as schema_file:
+            expected_schema = json.load(schema_file)
+
+        # Validate the response against the expected schema
+        validate(instance=context.response.json(), schema=expected_schema)
+        print("The response matches the expected schema.")
+    except ValidationError as e:
+        # If validation fails, print error message and assert False to fail the step
+        print(f"The response does not match the expected schema: {e.message}")
+        assert False, f"Schema validation failed: {e}"
+
+

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -29,16 +32,34 @@ body {
 /* Estilos para el título del informe */
 h1.titulo_report {
     width: 100%;
-    height: 100px;
-    background: linear-gradient(45deg, #4CAF50, #FFC107); /* Gradiente de color */
-    text-align: center;
-    color: white;
+    height: 95px;
+    /* background: linear-gradient(45deg, #4CAF50, #FFC107); Gradiente de color */
+    /* text-align: center; */
+    color: #0077b6;
     letter-spacing: 2px;
     font-size: 50px;
     padding: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
-    font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); Sombra */
+    /* font-family: 'Roboto', sans-serif; Fuente personalizada */
+    font-weight: 400;
+    font-style: normal;
     animation: fadeInDown 1s ease; /* Animación */
+}
+
+p{
+    height: 45px;
+    font-size: 13px;
+    padding-right: 9px;
+    margin-bottom: 0px !important;
+    font-weight: 300;
+    font-style: normal;
+    animation: fadeInDown 1s ease; /* Animación */
+}
+
+b{
+    font-weight: 400;
+    font-style: normal;
+    color: #0077b6;
 }
 
 /* Animación para el título */
@@ -68,23 +89,50 @@ h1.titulo_report {
     transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
 }
 
-/* Estilos para los elementos de cabecera y cuerpo */
-.header-feature, .body-feature {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Estilos específicos para el encabezado */
+h2 {
+    color: #0077b6 !important;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/* Estilos específicos para el encabezado */
 .header-feature {
-    background-color: #007bff;
-    color: white;
     margin-top: 20px;
     width: 100%;
     height: 100%;
     padding: 15px;
+    border-left: 3px solid #caf0f8;
+    border-right: 3px solid #caf0f8;
+    border-radius: 9px;
+}
+
+/* Estilos para los elementos de cuerpo */
+.body-feature {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 3px solid #caf0f8;
+    border-right: 3px solid #caf0f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3, th {
+    color: #0077b6 !important;
+    font-weight: 700;
+    font-style: normal;
+}
+
+strong {
+    color: #0077b6;
+    font-weight: 400;
+    font-style: normal;
+}
+
+span.first-word {
+    color: #00b4d8;
 }
 
 .header-feature h2 {
@@ -94,13 +142,8 @@ h1.titulo_report {
     font-size: 26px !important;
 }
 
-
-.header-feature:hover {
-    background-color: #0056b3; /* Cambio de color al pasar el cursor */
-}
-
 /* Estilos específicos para el cuerpo */
-.body-feature:hover {
+.header-feature:hover, .body-feature:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Cambio de sombra al pasar el cursor */
 }
 
@@ -122,8 +165,9 @@ h1.titulo_report {
 }
 
 #totalSteps {
-
     text-align: center;
+    font-weight: 400;
+    color: #0077b6;
 }
 
 /* Estilos para los párrafos dentro de los elementos de cabecera y cuerpo */
@@ -145,9 +189,6 @@ h1.titulo_report {
 }
 
 /* Estilos para los enlaces */
-.titulo_report:hover {
-    color: #000000;
-}
 
 td.long-number {
     padding-left: 10px !important;
@@ -168,3 +209,41 @@ td:nth-child(3) {
     padding-left: 18px;
 }
 
+footer {
+    background-color: #caf0f8;
+    border-radius: 5px;
+
+}
+
+h5 {
+    color: #0077b6 !important;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0px !important;
+    width: 225px;
+}
+
+button {
+    width: 225px;
+}
+
+@media print{
+
+    .footer-image {
+        width: 120px;
+    }
+
+    .printed-footer {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .printed-footer .footer-text-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+    }
+}

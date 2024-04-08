@@ -1,7 +1,18 @@
-# features/Apis.feature
-@administracion
-@Get_genes
-@v_1
+# features/genes.feature
+#project name
+@Administracion_La_Rioja
+
+#title report
+@Test_Genes_Report
+
+#All test cases
+@Get_Genes
+
+#Environment
+@dev
+
+#version
+@tcs_0.0.1
 
 Feature: Verify list endpoint of Genes
 
