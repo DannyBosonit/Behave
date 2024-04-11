@@ -10,10 +10,10 @@ def run_behave_tests():
     sys.argv = sys.argv[:1]  # Limpia los argumentos existentes de sys.argv excepto el nombre del script
 
     sys.argv.extend([
-        "features/firma.feature",
+        "features/pasarelaPagos.feature",
         '--no-capture',
         '--no-skipped',
-        "--tags=Post_firma",
+        "--tags=Get_pasarela_pagos",
         "--format=json",
         "--outfile=output/report.json",
     ])

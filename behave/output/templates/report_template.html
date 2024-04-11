@@ -20,7 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="report-container">
       {% for tags in json_data %}
       <div class="row d-flex justify-content-around">
         <h1 class="col titulo_report text-xxl-end m-0">{{ tags ['tags'] [1] }}</h1>
@@ -65,7 +65,7 @@
         <h3>{{ element['keyword'] }}: {{ element['name'] }}</h3>
         <p><strong>Tags:</strong> {{ element['tags'] | join(', ') }}</p>
         <p><strong>Status:</strong> <span class="{{ element['status'] }}">{{ element['status'] }}</span></p>
-        <table>
+        <table  class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
@@ -87,17 +87,17 @@
             {% endfor %}
           </tbody>
         </table>
+      </div>
           {% endfor %}
         {% endfor %}
-      </div>
 
       <footer class="pt-3 pb-5">
         <div class="container text-md-start">
           <div class="printed-footer row">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-5 mt-3">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-5 mt-3 d-flex justify-content-center align-items-center">
               <img
                 class="footer-image"
-                src="images/Bosonit-con-lema.png"
+                src="images/Bosonit.svg"
                 alt="Bosonit-lema"
                 width="210px"
               />
@@ -120,6 +120,21 @@
     <!--End Container principal-->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+         // Dar estilo a la primera palabra de la columna Step
+        let paragraphs = document.querySelectorAll('td span');
+
+        paragraphs.forEach(function(paragraph) { 
+        let words = paragraph.textContent.trim().split(' ');
+
+        let firstWord = words.shift();
+
+        let firstWordSpan = document.createElement('span');
+        firstWordSpan.textContent = firstWord + ' ';
+        firstWordSpan.classList.add('blue-word');
+
+        paragraph.innerHTML = firstWordSpan.outerHTML + words.join(' ');
+      })
+
         // Obtener la fecha y hora actual
         const currentDate = new Date();
         const options = {
