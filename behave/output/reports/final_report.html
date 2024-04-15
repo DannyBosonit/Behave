@@ -21,17 +21,18 @@
   </head>
   <body>
     <div class="report-container">
-      
-      <div class="row d-flex justify-content-around">
-        <h1 class="col titulo_report text-xxl-end m-0">Pasarela_de_Pagos_Report</h1>
-        <div class="col d-flex justify-content-end align-items-end">
+      <div class="row">
+        <h1 class="titulo_report text-center m-0">Pasarela_de_Pagos_Report</h1>
+      </div>
+      <div class="row">
+        <div class="d-flex justify-content-center align-items-center">
           <p><b>Project name:</b> administracion_La_Rioja</p>
           <p><b>Tests Cases:</b> Get_pasarela_pagos</p>
           <p><b>Enviroment:</b> dev</p>
           <p><b>Version:</b> tcs_0.0.1</p>
         </div>
       </div>
-      
+
       <hr class="m-0 border border-primary border-3 rounded-pill" />
 
       <div class="row">
@@ -48,7 +49,7 @@
 
       <br />
       <h4 id="totalSteps">Total Steps:</h4>
-      
+
       <div class="header-feature mb-3">
         <h2>Feature: Feature: Verify list endpoint of Pasarela de Pagos</h2>
         <p>
@@ -59,1070 +60,1204 @@
         <p><strong>Date: </strong><span id="currentDateTime"></span></p>
       </div>
 
-
-      
       <div class="body-feature">
         <h3>Scenario: Returns comprobar estado de pago list 200</h3>
         <p><strong>Tags:</strong> tc_comprobar_estado_pagado</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "comprobarEstado"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "comprobarEstado"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.002997875213623047">
                 0.002997875213623047
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "comprobarEstado"</span>
+                <span class="first-word"
+                  >When I set the query parameters for "comprobarEstado"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0020036697387695312">
                 0.0020036697387695312
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.000997304916381836">
                 0.000997304916381836
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.2768721580505371">
                 0.2768721580505371
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010013580322265625">
                 0.0010013580322265625
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009927749633789062">
                 0.0009927749633789062
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.005999088287353516">
                 0.005999088287353516
               </td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns comprobar un pago list 200</h3>
         <p><strong>Tags:</strong> tc_comprobar_pagado</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "comprobarPagado"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "comprobarPagado"</span
+                >
               </td>
               <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0">
-                0.0
-              </td>
+              <td class="duration-cell" data-duration="0.0">0.0</td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "comprobarPagado"</span>
+                <span class="first-word"
+                  >When I set the query parameters for "comprobarPagado"</span
+                >
               </td>
               <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0">
-                0.0
-              </td>
+              <td class="duration-cell" data-duration="0.0">0.0</td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0">
-                0.0
-              </td>
+              <td class="duration-cell" data-duration="0.0">0.0</td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.24569487571716309">
                 0.24569487571716309
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.001001596450805664">
                 0.001001596450805664
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010018348693847656">
                 0.0010018348693847656
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0009953975677490234">
                 0.0009953975677490234
               </td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns consultar catos de pago list 200</h3>
         <p><strong>Tags:</strong> tc_consultar_datos_pago</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "consultarDatosPago"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "consultarDatosPago"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010013580322265625">
                 0.0010013580322265625
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "consultarDatosPago"</span>
+                <span class="first-word"
+                  >When I set the query parameters for
+                  "consultarDatosPago"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009975433349609375">
                 0.0009975433349609375
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010402202606201172">
                 0.0010402202606201172
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.2439408302307129">
                 0.2439408302307129
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010056495666503906">
                 0.0010056495666503906
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.001998424530029297">
                 0.001998424530029297
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0049991607666015625">
                 0.0049991607666015625
               </td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns consultar modo de pago list 200</h3>
         <p><strong>Tags:</strong> tc_consultar_modo_pago</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "consultarModoPago"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "consultarModoPago"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009996891021728516">
                 0.0009996891021728516
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "consultarModoPago"</span>
+                <span class="first-word"
+                  >When I set the query parameters for "consultarModoPago"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009992122650146484">
                 0.0009992122650146484
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009987354278564453">
                 0.0009987354278564453
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.24700188636779785">
                 0.24700188636779785
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.001997232437133789">
                 0.001997232437133789
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.03400135040283203">
                 0.03400135040283203
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="No Result">No Result</td>
-              <td class="duration-cell" data-duration="N/A">
-                N/A
-              </td>
+              <td class="duration-cell" data-duration="N/A">N/A</td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns generar modelo 046 list 200</h3>
         <p><strong>Tags:</strong> tc_generar_modelo_046</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "generarModelo046"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "generarModelo046"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.006006956100463867">
                 0.006006956100463867
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "generarModelo046"</span>
+                <span class="first-word"
+                  >When I set the query parameters for "generarModelo046"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.001995086669921875">
                 0.001995086669921875
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.000997781753540039">
                 0.000997781753540039
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.2720046043395996">
                 0.2720046043395996
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0029976367950439453">
                 0.0029976367950439453
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="No Result">No Result</td>
-              <td class="duration-cell" data-duration="N/A">
-                N/A
-              </td>
+              <td class="duration-cell" data-duration="N/A">N/A</td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="No Result">No Result</td>
-              <td class="duration-cell" data-duration="N/A">
-                N/A
-              </td>
+              <td class="duration-cell" data-duration="N/A">N/A</td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns get entidades list 200</h3>
         <p><strong>Tags:</strong> tc_get_entidades</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "getEntidades"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "getEntidades"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010023117065429688">
                 0.0010023117065429688
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "getEntidades"</span>
+                <span class="first-word"
+                  >When I set the query parameters for "getEntidades"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0019986629486083984">
                 0.0019986629486083984
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010023117065429688">
                 0.0010023117065429688
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.3340010643005371">
                 0.3340010643005371
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009922981262207031">
                 0.0009922981262207031
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010023117065429688">
                 0.0010023117065429688
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0030007362365722656">
                 0.0030007362365722656
               </td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns get entidades tarjeta list 200</h3>
         <p><strong>Tags:</strong> tc_get_entidades_tarjeta</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "getEntidadesTarjeta"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "getEntidadesTarjeta"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009953975677490234">
                 0.0009953975677490234
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "getEntidadesTarjeta"</span>
+                <span class="first-word"
+                  >When I set the query parameters for
+                  "getEntidadesTarjeta"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009975433349609375">
                 0.0009975433349609375
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009963512420654297">
                 0.0009963512420654297
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.24800515174865723">
                 0.24800515174865723
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009965896606445312">
                 0.0009965896606445312
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.00099945068359375">
                 0.00099945068359375
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0010042190551757812">
                 0.0010042190551757812
               </td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns nrc diferido list 200</h3>
         <p><strong>Tags:</strong> tc_nrc_diferido</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "nrcDiferido"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "nrcDiferido"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.002000570297241211">
                 0.002000570297241211
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "nrcDiferido"</span>
+                <span class="first-word"
+                  >When I set the query parameters for "nrcDiferido"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0019996166229248047">
                 0.0019996166229248047
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0019948482513427734">
                 0.0019948482513427734
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.45842742919921875">
                 0.45842742919921875
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0">
-                0.0
-              </td>
+              <td class="duration-cell" data-duration="0.0">0.0</td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009996891021728516">
                 0.0009996891021728516
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
-              <td class="duration-cell" data-duration="0.0">
-                0.0
-              </td>
+              <td class="duration-cell" data-duration="0.0">0.0</td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns pagar list 200</h3>
         <p><strong>Tags:</strong> tc_pagar</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "pagar"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "pagar"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010027885437011719">
                 0.0010027885437011719
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "pagar"</span>
+                <span class="first-word"
+                  >When I set the query parameters for "pagar"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009982585906982422">
                 0.0009982585906982422
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009932518005371094">
                 0.0009932518005371094
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.23003506660461426">
                 0.23003506660461426
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010025501251220703">
                 0.0010025501251220703
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.00803828239440918">
                 0.00803828239440918
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0020067691802978516">
                 0.0020067691802978516
               </td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns solicitar numero pago list 200</h3>
         <p><strong>Tags:</strong> tc_solicitar_numero_pago</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "solicitarNumeroPago"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "solicitarNumeroPago"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.002006053924560547">
                 0.002006053924560547
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "solicitarNumeroPago"</span>
+                <span class="first-word"
+                  >When I set the query parameters for
+                  "solicitarNumeroPago"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010001659393310547">
                 0.0010001659393310547
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0">
-                0.0
-              </td>
+              <td class="duration-cell" data-duration="0.0">0.0</td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.18099546432495117">
                 0.18099546432495117
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.001003265380859375">
                 0.001003265380859375
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009968280792236328">
                 0.0009968280792236328
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0030035972595214844">
                 0.0030035972595214844
               </td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns solicitar numero pago reintento list 200</h3>
         <p><strong>Tags:</strong> tc_solicitar_numero_pago_reintento</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "solicitarNumeroPagoReintento"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "solicitarNumeroPagoReintento"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.002000570297241211">
                 0.002000570297241211
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "solicitarNumeroPagoReintento"</span>
+                <span class="first-word"
+                  >When I set the query parameters for
+                  "solicitarNumeroPagoReintento"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0020034313201904297">
                 0.0020034313201904297
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.001999378204345703">
                 0.001999378204345703
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.13500356674194336">
                 0.13500356674194336
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010075569152832031">
                 0.0010075569152832031
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010023117065429688">
                 0.0010023117065429688
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0009984970092773438">
                 0.0009984970092773438
               </td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
+
       <div class="body-feature">
         <h3>Scenario: Returns verificar nrc list 200</h3>
         <p><strong>Tags:</strong> tc_verificar_nrc</p>
         <p><strong>Status:</strong> <span class="failed">failed</span></p>
-        <table  class="table table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
-            
             <tr>
               <td>
-                <span class="first-word">Given I prepare the URI "http://localhost:8504/pagos/" request with path "verificarNrc"</span>
+                <span class="first-word"
+                  >Given I prepare the URI "http://localhost:8504/pagos/"
+                  request with path "verificarNrc"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0010013580322265625">
                 0.0010013580322265625
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I set the query parameters for "verificarNrc"</span>
+                <span class="first-word"
+                  >When I set the query parameters for "verificarNrc"</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.0009987354278564453">
                 0.0009987354278564453
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I prepare the request headers</span>
+                <span class="first-word"
+                  >And I prepare the request headers</span
+                >
               </td>
               <td class="passed">passed</td>
-              <td class="duration-cell" data-duration="0.0">
-                0.0
-              </td>
+              <td class="duration-cell" data-duration="0.0">0.0</td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">When I send a "GET" request to the endpoint</span>
+                <span class="first-word"
+                  >When I send a "GET" request to the endpoint</span
+                >
               </td>
               <td class="passed">passed</td>
               <td class="duration-cell" data-duration="0.012962102890014648">
                 0.012962102890014648
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">Then I should receive a status code of 200</span>
+                <span class="first-word"
+                  >Then I should receive a status code of 200</span
+                >
               </td>
               <td class="failed">failed</td>
               <td class="duration-cell" data-duration="0.0010039806365966797">
                 0.0010039806365966797
               </td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And I capture and log the response details</span>
+                <span class="first-word"
+                  >And I capture and log the response details</span
+                >
               </td>
               <td class="No Result">No Result</td>
-              <td class="duration-cell" data-duration="N/A">
-                N/A
-              </td>
+              <td class="duration-cell" data-duration="N/A">N/A</td>
             </tr>
-            
+
             <tr>
               <td>
-                <span class="first-word">And The response must match the expected schema for " "</span>
+                <span class="first-word"
+                  >And The response must match the expected schema for " "</span
+                >
               </td>
               <td class="No Result">No Result</td>
-              <td class="duration-cell" data-duration="N/A">
-                N/A
-              </td>
+              <td class="duration-cell" data-duration="N/A">N/A</td>
             </tr>
-            
           </tbody>
         </table>
       </div>
-          
-        
 
       <footer class="pt-3 pb-5">
         <div class="container text-md-start">
           <div class="printed-footer row">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-5 mt-3 d-flex justify-content-center align-items-center">
+            <div
+              class="col-md-3 col-lg-3 col-xl-3 mx-5 mt-3 d-flex justify-content-center align-items-center"
+            >
               <img
                 class="footer-image"
                 src="images/Bosonit.svg"
@@ -1148,20 +1283,20 @@
     <!--End Container principal-->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-         // Dar estilo a la primera palabra de la columna Step
-        let paragraphs = document.querySelectorAll('td span');
+        // Dar estilo a la primera palabra de la columna Step
+        let paragraphs = document.querySelectorAll("td span");
 
-        paragraphs.forEach(function(paragraph) { 
-        let words = paragraph.textContent.trim().split(' ');
+        paragraphs.forEach(function (paragraph) {
+          let words = paragraph.textContent.trim().split(" ");
 
-        let firstWord = words.shift();
+          let firstWord = words.shift();
 
-        let firstWordSpan = document.createElement('span');
-        firstWordSpan.textContent = firstWord + ' ';
-        firstWordSpan.classList.add('blue-word');
+          let firstWordSpan = document.createElement("span");
+          firstWordSpan.textContent = firstWord + " ";
+          firstWordSpan.classList.add("blue-word");
 
-        paragraph.innerHTML = firstWordSpan.outerHTML + words.join(' ');
-      })
+          paragraph.innerHTML = firstWordSpan.outerHTML + words.join(" ");
+        });
 
         // Obtener la fecha y hora actual
         const currentDate = new Date();

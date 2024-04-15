@@ -22,9 +22,11 @@
   <body>
     <div class="report-container">
       {% for tags in json_data %}
-      <div class="row d-flex justify-content-around">
-        <h1 class="col titulo_report text-xxl-end m-0">{{ tags ['tags'] [1] }}</h1>
-        <div class="col d-flex justify-content-end align-items-end">
+      <div class="row">
+        <h1 class="titulo_report text-center m-0">{{ tags ['tags'] [1] }}</h1>
+      </div>
+      <div class="row">
+        <div class="d-flex justify-content-center align-items-center">
           <p><b>Project name:</b> {{ tags ['tags'] [0] }}</p>
           <p><b>Tests Cases:</b> {{ tags ['tags'] [2] }}</p>
           <p><b>Enviroment:</b> {{ tags ['tags'] [3] }}</p>
@@ -59,28 +61,39 @@
         <p><strong>Date: </strong><span id="currentDateTime"></span></p>
       </div>
 
-
       {% for element in feature['elements'] %}
       <div class="body-feature">
         <h3>{{ element['keyword'] }}: {{ element['name'] }}</h3>
         <p><strong>Tags:</strong> {{ element['tags'] | join(', ') }}</p>
-        <p><strong>Status:</strong> <span class="{{ element['status'] }}">{{ element['status'] }}</span></p>
-        <table  class="table table-striped">
+        <p>
+          <strong>Status:</strong>
+          <span class="{{ element['status'] }}">{{ element['status'] }}</span>
+        </p>
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Step</th>
               <th class="text-center">Result</th>
-              <th>Duration (s)</th>
+              <th class="duration-column">Duration (s)</th>
             </tr>
           </thead>
           <tbody>
             {% for step in element['steps'] %}
             <tr>
               <td>
-                <span class="first-word">{{ step['keyword'] }} {{ step['name'] }}</span>
+                <span class="first-word"
+                  >{{ step['keyword'] }} {{ step['name'] }}</span
+                >
               </td>
-              <td class="{{ step.get('result', {}).get('status', 'No Result') }}">{{ step.get('result', {}).get('status', 'No Result') }}</td>
-              <td class="duration-cell" data-duration="{{ step.get('result', {}).get('duration', 'N/A') }}">
+              <td
+                class="{{ step.get('result', {}).get('status', 'No Result') }}"
+              >
+                {{ step.get('result', {}).get('status', 'No Result') }}
+              </td>
+              <td
+                class="duration-cell"
+                data-duration="{{ step.get('result', {}).get('duration', 'N/A') }}"
+              >
                 {{ step.get('result', {}).get('duration', 'N/A') }}
               </td>
             </tr>
@@ -88,13 +101,14 @@
           </tbody>
         </table>
       </div>
-          {% endfor %}
-        {% endfor %}
+      {% endfor %} {% endfor %}
 
       <footer class="pt-3 pb-5">
         <div class="container text-md-start">
           <div class="printed-footer row">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-5 mt-3 d-flex justify-content-center align-items-center">
+            <div
+              class="col-md-3 col-lg-3 col-xl-3 mx-5 mt-3 d-flex justify-content-center align-items-center"
+            >
               <img
                 class="footer-image"
                 src="images/Bosonit.svg"
@@ -120,20 +134,20 @@
     <!--End Container principal-->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-         // Dar estilo a la primera palabra de la columna Step
-        let paragraphs = document.querySelectorAll('td span');
+        // Dar estilo a la primera palabra de la columna Step
+        let paragraphs = document.querySelectorAll("td span");
 
-        paragraphs.forEach(function(paragraph) { 
-        let words = paragraph.textContent.trim().split(' ');
+        paragraphs.forEach(function (paragraph) {
+          let words = paragraph.textContent.trim().split(" ");
 
-        let firstWord = words.shift();
+          let firstWord = words.shift();
 
-        let firstWordSpan = document.createElement('span');
-        firstWordSpan.textContent = firstWord + ' ';
-        firstWordSpan.classList.add('blue-word');
+          let firstWordSpan = document.createElement("span");
+          firstWordSpan.textContent = firstWord + " ";
+          firstWordSpan.classList.add("blue-word");
 
-        paragraph.innerHTML = firstWordSpan.outerHTML + words.join(' ');
-      })
+          paragraph.innerHTML = firstWordSpan.outerHTML + words.join(" ");
+        });
 
         // Obtener la fecha y hora actual
         const currentDate = new Date();

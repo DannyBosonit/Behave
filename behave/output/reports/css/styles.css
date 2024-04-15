@@ -1,249 +1,280 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
-#container-canva{
-    width: 100%;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
 
+.report-container {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+#container-canva {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
 }
 
 #container-duration-canva {
-    width: 100%;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
 }
 
 /* Estilos para el título del informe */
 h1.titulo_report {
-    width: 100%;
-    height: 95px;
-    /* background: linear-gradient(45deg, #4CAF50, #FFC107); Gradiente de color */
-    /* text-align: center; */
-    color: #0077b6;
-    letter-spacing: 2px;
-    font-size: 50px;
-    padding: 20px;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); Sombra */
-    /* font-family: 'Roboto', sans-serif; Fuente personalizada */
-    font-weight: 400;
-    font-style: normal;
-    animation: fadeInDown 1s ease; /* Animación */
+  width: 100%;
+  height: 95px;
+  /* background: linear-gradient(45deg, #4CAF50, #FFC107); Gradiente de color */
+  /* text-align: center; */
+  color: #0077b6;
+  letter-spacing: 2px;
+  font-size: 50px;
+  padding: 20px;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); Sombra */
+  /* font-family: 'Roboto', sans-serif; Fuente personalizada */
+  font-weight: 400;
+  font-style: normal;
+  animation: fadeInDown 1s ease; /* Animación */
 }
 
-p{
-    height: 45px;
-    font-size: 13px;
-    padding-right: 9px;
-    margin-bottom: 0px !important;
-    font-weight: 300;
-    font-style: normal;
-    animation: fadeInDown 1s ease; /* Animación */
+p {
+  height: 45px;
+  font-size: 13px;
+  padding-right: 9px;
+  margin-bottom: 0px !important;
+  font-weight: 300;
+  font-style: normal;
+  animation: fadeInDown 1s ease; /* Animación */
 }
 
-b{
-    font-weight: 400;
-    font-style: normal;
-    color: #0077b6;
+b {
+  font-weight: 400;
+  font-style: normal;
+  color: #0077b6;
 }
 
 /* Animación para el título */
 @keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Contenedor principal */
 .container-principal {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out; /* Transición al pasar el cursor */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out; /* Transición al pasar el cursor */
 }
 
 .container-principal:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+  transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
 }
 
 /* Estilos específicos para el encabezado */
 h2 {
-    color: #0077b6 !important;
-    font-weight: 400;
-    font-style: normal;
+  color: #0077b6 !important;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header-feature {
-    margin-top: 20px;
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    border-left: 3px solid #caf0f8;
-    border-right: 3px solid #caf0f8;
-    border-radius: 9px;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border-left: 3px solid #caf0f8;
+  border-right: 3px solid #caf0f8;
+  border-radius: 9px;
 }
 
 /* Estilos para los elementos de cuerpo */
 .body-feature {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-left: 3px solid #caf0f8;
-    border-right: 3px solid #caf0f8;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-weight: 400;
-    font-style: normal;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 3px solid #caf0f8;
+  border-right: 3px solid #caf0f8;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  font-style: normal;
 }
 
-h3, th {
-    color: #0077b6 !important;
-    font-weight: 700;
-    font-style: normal;
+h3,
+th {
+  color: #0077b6 !important;
+  font-weight: 700;
+  font-style: normal;
 }
 
-strong {
-    color: #0077b6;
-    font-weight: 400;
-    font-style: normal;
-}
-
-span.first-word {
-    color: #00b4d8;
-}
-
-.header-feature h2 {
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    font-size: 26px !important;
-}
-
-/* Estilos específicos para el cuerpo */
-.header-feature:hover, .body-feature:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Cambio de sombra al pasar el cursor */
-}
-
-/* Estilos para los títulos dentro de los elementos de cabecera y cuerpo */
-.header-feature h2, .body-feature h3 {
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.passed {
-    color: #007700;
-    /* Text in green */
-}
-
-.failed {
-    color: #DD0000;
-    /* Text in red */
-}
-
-#totalSteps {
-    text-align: center;
-    font-weight: 400;
-    color: #0077b6;
-}
-
-/* Estilos para los párrafos dentro de los elementos de cabecera y cuerpo */
-.header-feature p, .body-feature p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.duration-column {
+  width: 120px;
 }
 
 .duration-cell {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 13px;
+  text-align: center;
+}
+
+strong {
+  color: #0077b6;
+  font-weight: 400;
+  font-style: normal;
+}
+
+span.first-word {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.blue-word {
+  color: #00b4d8;
+}
+
+.header-feature h2 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  font-size: 26px !important;
+}
+
+/* Estilos específicos para el cuerpo */
+.header-feature:hover,
+.body-feature:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Cambio de sombra al pasar el cursor */
+}
+
+/* Estilos para los títulos dentro de los elementos de cabecera y cuerpo */
+.header-feature h2,
+.body-feature h3 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.passed {
+  color: #007700 !important;
+  /* Text in green */
+}
+
+.failed {
+  color: #dd0000 !important;
+  /* Text in red */
+}
+
+#totalSteps {
+  text-align: center;
+  font-weight: 400;
+  color: #0077b6;
+}
+
+/* Estilos para los párrafos dentro de los elementos de cabecera y cuerpo */
+.header-feature p,
+.body-feature p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 /* Estilos para la tabla */
 .body-feature table {
-    width: 100%;
+  width: 100%;
 }
 
 /* Estilos para los enlaces */
 
 td.long-number {
-    padding-left: 10px !important;
+  padding-left: 10px !important;
 }
-
 
 /* QUITAR AL TERMINAR */
 
 td:nth-child(2) {
-    text-align: center;
-    vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
 }
 
 td:nth-child(3) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 18px;
 }
 
 footer {
-    background-color: #caf0f8;
-    border-radius: 5px;
-
+  background-color: #caf0f8;
+  border-radius: 5px;
 }
 
 h5 {
-    color: #0077b6 !important;
-    font-weight: 700;
-    font-style: normal;
-    margin-bottom: 0px !important;
-    width: 225px;
+  color: #0077b6 !important;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 0px !important;
+  width: 225px;
 }
 
 button {
-    width: 225px;
+  width: 225px;
 }
 
-@media print{
+@media print {
+  .title-container h1 {
+    text-align: center;
+  }
 
-    .footer-image {
-        width: 120px;
-    }
+  .title-container div {
+    display: flex;
+    justify-content: center !important;
+  }
 
-    .printed-footer {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        justify-content: center;
-    }
+  .report-container {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
 
-    .printed-footer .footer-text-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
-    }
+  .duration-column {
+    width: 120px;
+  }
+
+  .footer-image {
+    width: 120px;
+  }
+
+  .printed-footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .printed-footer .footer-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
 }
